@@ -64,7 +64,7 @@
           id="menuBtn"
           class="md:hidden text-2xl"
         >
-          <i class="fa-solid fa-bars"></i>
+          <i id="menuIcon" class="fa-solid fa-bars"></i>
         </button>
       </div>
 
@@ -411,9 +411,12 @@
 
       const menuBtn = document.getElementById("menuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = document.getElementById("menuIcon");
 
-      menuBtn.addEventListener("click", () => {
+        menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        menuIcon.classList.toggle("fa-bars");
+        menuIcon.classList.toggle("fa-xmark");
       });
 
       // Counter Animation

@@ -101,7 +101,7 @@
             id="menuBtn"
             class="md:hidden text-2xl"
           >
-            <i class="fa-solid fa-bars"></i>
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
           </button>
         </div>
       </div>
@@ -387,15 +387,15 @@
 
     // Mobile Menu
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+    const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = document.getElementById("menuIcon");
 
-    const mobileMenu =
-      document.getElementById("mobileMenu");
-
-    menuBtn.onclick = () => {
-      mobileMenu.classList.toggle("hidden");
-    };
+        menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuIcon.classList.toggle("fa-bars");
+        menuIcon.classList.toggle("fa-xmark");
+      });
 
     // Gallery Lightbox
 
