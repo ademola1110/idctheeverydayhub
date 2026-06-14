@@ -31,7 +31,7 @@
 
       .hero-bg {
         background:
-          /* linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), */ 
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3)), 
           url("https://media.istockphoto.com/id/2214445664/photo/mechanics-discussing-the-diagnosis-of-a-car-at-an-auto-repair-shop.webp?a=1&b=1&s=612x612&w=0&k=20&c=VAIjerYHe_rCIKDHM9g3Zo1sPNl2CflPSKxyOh8CVS4=");
         background-size: cover;
         background-position: center;
@@ -44,9 +44,9 @@
 
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-4"
       >
-        <h1 class="text-2xl font-bold text-blue-700">THE EVERYDAY HUB</h1>
+        <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">THE EVERYDAY HUB</h1>
 
         <ul id="navMenu" class="hidden md:flex gap-8 font-medium text-gray-700">
           <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
@@ -94,33 +94,33 @@
 
     <!-- ================= HERO ================= -->
 
-    <section class="hero-bg h-screen flex items-center">
-      <div class="max-w-7xl mx-auto px-6 text-white">
-        <p class="uppercase tracking-[5px] text-[25px] text-yellow-400 mb-3">
+    <section class="hero-bg min-h-screen md:h-screen flex items-center py-24 md:py-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-white">
+        <p class="uppercase tracking-[2px] sm:tracking-[4px] text-base sm:text-xl md:text-2xl text-yellow-400 mb-3">
           THE EVERYDAY HUB
         </p>
 
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight">
           Professional Tech <br />
           Auto Repair & Maintenance
         </h1>
 
-        <p class="mt-6 text-lg max-w-2xl text-gray-200">
+        <p class="mt-6 text-base sm:text-lg max-w-2xl text-gray-200">
           We provide reliable diagnostics, engine repairs, brake services, oil
           changes, electrical repairs, and complete vehicle maintenance with
           experienced mechanics and quality spare parts.
         </p>
 
-        <div class="flex flex-wrap gap-4 mt-8">
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
           <a
             href="contact.html"
-            class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 rounded-full"
+            class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center"
           >
             Book Appointment
           </a>
           <a
             href="services.html"
-            class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-full transition"
+            class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-full transition w-full sm:w-auto text-center"
           >
             Our Services
           </a>
@@ -131,9 +131,9 @@
     <!-- ================= FEATURES ================= -->
 
     <section class="py-20">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <div class="text-center mb-14">
-          <h2 class="text-4xl font-bold">Why Choose Us</h2>
+          <h2 class="text-3xl md:text-4xl font-bold">Why Choose Us</h2>
 
           <p class="text-gray-600 mt-3">
             Quality workmanship and trusted automotive care.
@@ -196,10 +196,10 @@
 
     <!-- ================= SERVICES ================= -->
 
-    <section class="bg-gray-100 py-20">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="bg-gray-100 py-20 text-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <h2 class="text-4xl font-bold">Our Services</h2>
+          <h2 class="text-3xl md:text-4xl font-bold">Our Services</h2>
 
           <p class="text-gray-600 mt-3">
             Complete vehicle maintenance and repair solutions.
@@ -250,10 +250,10 @@
 
     <section class="bg-blue-700 py-20 text-white">
       <div
-        class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center"
+        class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-4 gap-10 text-center"
       >
         <div>
-          <h1 class="counter text-5xl font-bold" data-target="15">0</h1>
+          <h1 class="counter text-3xl sm:text-4xl md:text-5xl font-bold">0</h1>
 
           <p class="mt-3">Years Experience</p>
         </div>
@@ -281,10 +281,8 @@
     <!-- ================= CTA ================= -->
 
     <section class="py-24">
-      <div
-        class="max-w-5xl mx-auto bg-gray-900 rounded-3xl p-10 md:p-16 text-center text-white"
-      >
-        <h2 class="text-4xl md:text-5xl font-bold">Need Your Vehicle Fixed?</h2>
+      <div class="max-w-5xl mx-auto bg-gray-900 rounded-3xl p-6 sm:p-8 md:p-16 text-center text-white mx-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Need Your Vehicle Fixed?</h2>
 
         <p class="mt-5 text-gray-300">
           Let our experienced mechanics get you back on the road safely and
@@ -304,7 +302,7 @@
 
     <footer class="bg-black text-gray-300 py-10">
       <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-white">THE EVERYDAY HUB</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">THE EVERYDAY HUB</h2>
 
         <p class="mt-4">Professional Auto Repair & Maintenance Services.</p>
 
