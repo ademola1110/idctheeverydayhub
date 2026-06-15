@@ -1,445 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Gallery | THE EVERYDAY HUB</title>
+    <title>Gallery | THE EVERYDAY HUB</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-  <style>
-    * {
-      font-family: "Poppins", sans-serif;
-    }
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
 
-    .hero {
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600");
+      .hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600");
 
-      background-size: cover;
-      background-position: center;
-    }
+        background-size: cover;
+        background-position: center;
+      }
 
-    .gallery-card {
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 18px;
-    }
+      .gallery-card {
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 18px;
+      }
 
-    .gallery-card img {
-      transition: 0.5s;
-    }
+      .gallery-card img {
+        transition: 0.5s;
+      }
 
-    .gallery-card:hover img {
-      transform: scale(1.08);
-    }
-  </style>
-</head>
+      .gallery-card:hover img {
+        transform: scale(1.08);
+      }
+    </style>
+  </head>
 
-<body class="bg-gray-100">
+  <body class="bg-gray-100">
+    <!-- NAVBAR -->
 
-  <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div
+    class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-2"
+  >
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
+      <img
+        src="./images/IDCIMG.png"
+        alt="The Everyday Hub Logo"
+        class="h-10 sm:h-12 md:h-12 w-auto object-contain"
+      />
+    </a>
 
-  <nav
-      class="fixed top-0 left-0 w-full bg-white shadow-md z-50"
-    >
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+    <!-- Desktop Menu -->
+    <ul id="navMenu" class="hidden md:flex gap-8 font-medium text-gray-700">
+      <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
+      <li><a href="about.html" class="hover:text-blue-700">About</a></li>
+      <li><a href="services.html" class="hover:text-blue-700">Services</a></li>
+      <li><a href="gallery.html" class="text-blue-700">Gallery</a></li>
+      <li><a href="contact.html" class="hover:text-blue-700">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="contact.html"
+        class="hidden md:block bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-800 transition"
       >
-        <h1 class="text-2xl font-bold text-blue-700">
-          THE EVERYDAY HUB
-        </h1>
+        Book Now
+    </a>
 
-        <ul
-          id="navMenu"
-          class="hidden md:flex gap-8 font-medium text-gray-700"
-        >
-          <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
-          <li><a href="about.html" class="hover:text-blue-700">About</a></li>
-          <li><a href="services.html" class="hover:text-blue-700">Services</a></li>
-          <li><a href="gallery.html" class="text-blue-700 hover:text-blue-700">Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-blue-700">Contact</a></li>
-        </ul>
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i id="menuIcon" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
 
-        <div class="flex items-center gap-3">
-          <button
-            class="hidden md:block bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-800 transition"
-          >
-            Book Now
-          </button>
-
-          <button
-            id="menuBtn"
-            class="md:hidden text-2xl"
-          >
-            <i id="menuIcon" class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-
-      <div
-        id="mobileMenu"
-        class="hidden bg-white border-t"
-      >
-        <div class="flex flex-col p-5 space-y-4">
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden bg-white border-t">
+    <!-- Your mobile menu content -->
+     <div class="flex flex-col p-5 space-y-4">
           <a href="index.html" class="hover:text-blue-700">Home</a>
           <a href="about.html" class="hover:text-blue-700">About</a>
           <a href="services.html" class="hover:text-blue-700">Services</a>
           <a href="gallery.html" class="hover:text-blue-700">Gallery</a>
           <a href="contact.html" class="hover:text-blue-700">Contact</a>
 
-          <button
-            class="bg-blue-700 text-white py-3 rounded-lg"
-          >
+          <button class="bg-blue-700 text-white py-3 rounded-lg">
             Book Appointment
           </button>
+  </div>
+</nav>
+
+    <!-- HERO -->
+
+    <section
+      class="hero h-[420px] flex items-center justify-center text-center text-white px-6"
+    >
+      <div>
+        <p class="uppercase tracking-[5px] text-yellow-400 mb-4 text-[20px]">
+          Our Workshop
+        </p>
+
+        <h1 class="text-5xl md:text-6xl font-bold">Gallery</h1>
+
+        <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
+          Explore our workshop, equipment, technicians, and some of the quality
+          repair services we proudly deliver.
+        </p>
+      </div>
+    </section>
+
+    <!-- TITLE -->
+
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold">Inside AutoFix Garage</h2>
+
+        <p class="text-gray-600 mt-4">
+          A glimpse into our daily work and commitment to excellence.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="pb-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900"
+            class="preview w-full h-72 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=900"
+            class="preview w-full h-96 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1711386689622-1cda23e10217?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyJTIwdW5kZXIlMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D"
+            class="preview w-full h-72 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1599474151975-1f978922fa02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhciUyMHVuZGVyJTIwcmVwYWlyfGVufDB8fDB8fHww"
+            class="preview w-full h-80 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661501234169-b3485afce9eb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhciUyMHVuZGVyJTIwcmVwYWlyfGVufDB8fDB8fHww"
+            class="preview w-full h-[420px] object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661373022510-dfd61512e080?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyJTIwdW5kZXIlMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D"
+            class="preview w-full h-80 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661964211810-f078c3f9e111?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="preview w-full h-72 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://media.istockphoto.com/id/2274626014/photo/mechanic-examining-vehicle-suspension-under-a-car-on-a-hydraulic-lift.webp?a=1&b=1&s=612x612&w=0&k=20&c=Xo_u17pO6XL3b1JfCWvwvcPurTwdtUD1LV7KR8RSIsg="
+            class="preview w-full h-96 object-cover"
+          />
+        </div>
+
+        <div class="gallery-card shadow-lg">
+          <img
+            src="https://media.istockphoto.com/id/1892164077/photo/female-mechanic-with-light-working-under-car-in-auto-repair-shop.webp?a=1&b=1&s=612x612&w=0&k=20&c=tvfrCmJhukxI2F0oAe3fxtqWvyPZvnwq_PGBd69I2hw="
+            class="preview w-full h-72 object-cover"
+          />
         </div>
       </div>
-    </nav>
+    </section>
 
-  <!-- HERO -->
+    <!-- STATS -->
 
-  <section
-    class="hero h-[420px] flex items-center justify-center text-center text-white px-6"
-  >
-
-    <div>
-
-      <p
-        class="uppercase tracking-[5px] text-yellow-400 mb-4 text-[20px]"
+    <section class="bg-blue-700 py-20 text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center"
       >
-        Our Workshop
-      </p>
+        <div>
+          <h2 class="text-5xl font-bold">15+</h2>
+          <p class="mt-3">Years Experience</p>
+        </div>
 
-      <h1
-        class="text-5xl md:text-6xl font-bold"
-      >
-        Gallery
-      </h1>
+        <div>
+          <h2 class="text-5xl font-bold">5,000+</h2>
+          <p class="mt-3">Vehicles Repaired</p>
+        </div>
 
-      <p
-        class="mt-6 max-w-2xl mx-auto text-lg text-gray-200"
-      >
-        Explore our workshop, equipment, technicians,
-        and some of the quality repair services we
-        proudly deliver.
-      </p>
+        <div>
+          <h2 class="text-5xl font-bold">3,500+</h2>
+          <p class="mt-3">Happy Customers</p>
+        </div>
 
-    </div>
+        <div>
+          <h2 class="text-5xl font-bold">20+</h2>
+          <p class="mt-3">Skilled Mechanics</p>
+        </div>
+      </div>
+    </section>
 
-  </section>
+    <!-- CTA -->
 
-  <!-- TITLE -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-5xl font-bold">Your Vehicle Deserves Expert Care</h2>
 
-  <section class="py-16">
+        <p class="mt-6 text-lg text-gray-600">
+          Visit our workshop or schedule an appointment with our experienced
+          team.
+        </p>
+        <br />
+        <a
+          href="contact.html"
+          class="mt-8 bg-blue-700 text-white px-10 py-4 rounded-full hover:bg-blue-800"
+        >
+          Book Appointment
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-gray-900 py-10 text-center text-gray-300">
+      <h2 class="text-3xl font-bold text-white">THE EVERYDAY HUB</h2>
+
+      <p class="mt-4">Professional Automotive Repair & Maintenance Services</p>
+
+      <p class="mt-6 text-gray-500">© 2026 All Rights Reserved</p>
+    </footer>
+
+    <!-- LIGHTBOX -->
 
     <div
-      class="max-w-7xl mx-auto px-6 text-center"
+      id="lightbox"
+      class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6"
     >
+      <button id="closeBtn" class="absolute top-8 right-8 text-white text-4xl">
+        &times;
+      </button>
 
-      <h2
-        class="text-4xl font-bold"
-      >
-        Inside AutoFix Garage
-      </h2>
-
-      <p
-        class="text-gray-600 mt-4"
-      >
-        A glimpse into our daily work and commitment
-        to excellence.
-      </p>
-
+      <img id="lightboxImg" class="max-w-full max-h-[90vh] rounded-xl" />
     </div>
 
-  </section>
+    <script>
+      // Mobile Menu
 
-  <!-- GALLERY -->
-
-  <section class="pb-20">
-
-    <div
-      class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-    >
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900"
-          class="preview w-full h-72 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=900"
-          class="preview w-full h-96 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1711386689622-1cda23e10217?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyJTIwdW5kZXIlMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D"
-          class="preview w-full h-72 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1599474151975-1f978922fa02?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhciUyMHVuZGVyJTIwcmVwYWlyfGVufDB8fDB8fHww"
-          class="preview w-full h-80 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661501234169-b3485afce9eb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhciUyMHVuZGVyJTIwcmVwYWlyfGVufDB8fDB8fHww"
-          class="preview w-full h-[420px] object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661373022510-dfd61512e080?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyJTIwdW5kZXIlMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D"
-          class="preview w-full h-80 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661964211810-f078c3f9e111?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          class="preview w-full h-72 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://media.istockphoto.com/id/2274626014/photo/mechanic-examining-vehicle-suspension-under-a-car-on-a-hydraulic-lift.webp?a=1&b=1&s=612x612&w=0&k=20&c=Xo_u17pO6XL3b1JfCWvwvcPurTwdtUD1LV7KR8RSIsg="
-          class="preview w-full h-96 object-cover"
-        />
-      </div>
-
-      <div class="gallery-card shadow-lg">
-        <img
-          src="https://media.istockphoto.com/id/1892164077/photo/female-mechanic-with-light-working-under-car-in-auto-repair-shop.webp?a=1&b=1&s=612x612&w=0&k=20&c=tvfrCmJhukxI2F0oAe3fxtqWvyPZvnwq_PGBd69I2hw="
-          class="preview w-full h-72 object-cover"
-        />
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- STATS -->
-
-  <section class="bg-blue-700 py-20 text-white">
-
-    <div
-      class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center"
-    >
-
-      <div>
-        <h2 class="text-5xl font-bold">
-          15+
-        </h2>
-        <p class="mt-3">
-          Years Experience
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-5xl font-bold">
-          5,000+
-        </h2>
-        <p class="mt-3">
-          Vehicles Repaired
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-5xl font-bold">
-          3,500+
-        </h2>
-        <p class="mt-3">
-          Happy Customers
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-5xl font-bold">
-          20+
-        </h2>
-        <p class="mt-3">
-          Skilled Mechanics
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CTA -->
-
-  <section class="py-20 bg-white">
-
-    <div
-      class="max-w-4xl mx-auto text-center px-6"
-    >
-
-      <h2
-        class="text-5xl font-bold"
-      >
-        Your Vehicle Deserves Expert Care
-      </h2>
-
-      <p
-        class="mt-6 text-lg text-gray-600"
-      >
-        Visit our workshop or schedule an
-        appointment with our experienced team.
-      </p>
-      <br />
-      <a href="contact.html"
-        class="mt-8 bg-blue-700 text-white px-10 py-4 rounded-full hover:bg-blue-800"
-      >
-        Book Appointment
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer
-    class="bg-gray-900 py-10 text-center text-gray-300"
-  >
-
-    <h2
-      class="text-3xl font-bold text-white"
-    >
-      THE EVERYDAY HUB
-    </h2>
-
-    <p class="mt-4">
-      Professional Automotive Repair &
-      Maintenance Services
-    </p>
-
-    <p class="mt-6 text-gray-500">
-      © 2026 All Rights Reserved
-    </p>
-
-  </footer>
-
-  <!-- LIGHTBOX -->
-
-  <div
-    id="lightbox"
-    class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6"
-  >
-
-    <button
-      id="closeBtn"
-      class="absolute top-8 right-8 text-white text-4xl"
-    >
-      &times;
-    </button>
-
-    <img
-      id="lightboxImg"
-      class="max-w-full max-h-[90vh] rounded-xl"
-    />
-
-  </div>
-
-  <script>
-
-    // Mobile Menu
-
-    const menuBtn = document.getElementById("menuBtn");
+      const menuBtn = document.getElementById("menuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
       const menuIcon = document.getElementById("menuIcon");
 
-        menuBtn.addEventListener("click", () => {
+      menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
         menuIcon.classList.toggle("fa-bars");
         menuIcon.classList.toggle("fa-xmark");
       });
 
-    // Gallery Lightbox
+      // Gallery Lightbox
 
-    const previews =
-      document.querySelectorAll(".preview");
+      const previews = document.querySelectorAll(".preview");
 
-    const lightbox =
-      document.getElementById("lightbox");
+      const lightbox = document.getElementById("lightbox");
 
-    const lightboxImg =
-      document.getElementById("lightboxImg");
+      const lightboxImg = document.getElementById("lightboxImg");
 
-    const closeBtn =
-      document.getElementById("closeBtn");
+      const closeBtn = document.getElementById("closeBtn");
 
-    previews.forEach((img) => {
+      previews.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.classList.remove("hidden");
 
-      img.addEventListener("click", () => {
-
-        lightbox.classList.remove("hidden");
-
-        lightboxImg.src = img.src;
-
+          lightboxImg.src = img.src;
+        });
       });
 
-    });
-
-    closeBtn.onclick = () => {
-
-      lightbox.classList.add("hidden");
-
-    };
-
-    lightbox.onclick = (e) => {
-
-      if (e.target === lightbox) {
-
+      closeBtn.onclick = () => {
         lightbox.classList.add("hidden");
+      };
 
-      }
-
-    };
-
-  </script>
-
-</body>
+      lightbox.onclick = (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
 </html>
