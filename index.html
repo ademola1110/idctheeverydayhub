@@ -260,25 +260,25 @@
         class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-4 gap-10 text-center"
       >
         <div>
-          <h1 class="counter text-3xl sm:text-4xl md:text-5xl font-bold">0</h1>
+          <h1 class="counter text-3xl sm:text-4xl md:text-5xl font-bold">10+</h1>
 
           <p class="mt-3">Years Experience</p>
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold" data-target="3500">0</h1>
+          <h1 class="counter text-5xl font-bold" data-target="3500">850+</h1>
 
           <p class="mt-3">Happy Clients</p>
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold" data-target="5000">0</h1>
+          <h1 class="counter text-5xl font-bold" data-target="5000">500+</h1>
 
           <p class="mt-3">Vehicles Repaired</p>
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold" data-target="24">0</h1>
+          <h1 class="counter text-5xl font-bold" data-target="24">400+</h1>
 
           <p class="mt-3">Emergency Support</p>
         </div>
@@ -340,27 +340,7 @@
 
       // Counter Animation
 
-      const counters = document.querySelectorAll(".counter");
-
-      counters.forEach((counter) => {
-        let start = 0;
-        const target = Number(counter.dataset.target);
-
-        const update = () => {
-          const increment = target / 100;
-
-          start += increment;
-
-          if (start < target) {
-            counter.innerText = Math.floor(start);
-            requestAnimationFrame(update);
-          } else {
-            counter.innerText = target.toLocaleString() + "+";
-          }
-        };
-
-        update();
-      });
+      
     </script>
   </body>
 </html>
