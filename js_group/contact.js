@@ -77,6 +77,3 @@ form.addEventListener("submit", (e) => {
   // Clear form
   form.reset();
 });
-
-const messages = JSON.parse(localStorage.getItem("contactMessages"));
-console.table(messages);
