@@ -77,3 +77,15 @@ form.addEventListener("submit", (e) => {
   // Clear form
   form.reset();
 });
+
+// Scroll Top
+const scrollTopBtn = document.getElementById("scroll-top");
+
+scrollTopBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
