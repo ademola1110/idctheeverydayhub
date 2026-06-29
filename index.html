@@ -43,64 +43,89 @@
     <!-- ================= NAVBAR ================= -->
 
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-  <div
-    class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-2"
-  >
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center">
-      <img
-        src="../images/IDCIMG.png"
-        alt="The Everyday Hub Logo"
-        class="h-10 sm:h-12 md:h-12 w-auto object-contain"
-      />
-    </a>
-
-    <!-- Desktop Menu -->
-    <ul id="navMenu" class="hidden md:flex gap-8 font-medium text-gray-700">
-      <li><a href="index.html" class="text-[#e72c26]">Home</a></li>
-      <li><a href="./html_group/about.html" class="hover:text-red-700">About</a></li>
-      <li><a href="./html_group/services.html" class="hover:text-red-700">Services</a></li>
-      <li><a href="./html_group/gallery.html" class="hover:text-red-700">Gallery</a></li>
-      <li><a href="./html_group/contact.html" class="hover:text-red-700">Contact</a></li>
-    </ul>
-
-    <div class="flex items-center gap-3">
-      <a href="./html_group/contact.html"
-        class="hidden md:block bg-[#e72c26] text-white px-5 py-2 rounded-full hover:bg-red-700 transition"
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-2"
       >
-        Book Now
-    </a>
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <img
+            src="../images/IDCIMG.png"
+            alt="The Everyday Hub Logo"
+            class="h-10 sm:h-12 md:h-12 w-auto object-contain"
+          />
+        </a>
 
-      <button id="menuBtn" class="md:hidden text-2xl">
-        <i id="menuIcon" class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-  </div>
+        <!-- Desktop Menu -->
+        <ul id="navMenu" class="hidden md:flex gap-8 font-medium text-gray-700">
+          <li><a href="index.html" class="text-[#e72c26]">Home</a></li>
+          <li>
+            <a href="./html_group/about.html" class="hover:text-red-700"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="./html_group/services.html" class="hover:text-red-700"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="./html_group/gallery.html" class="hover:text-red-700"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="./html_group/contact.html" class="hover:text-red-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden bg-white border-t">
-    <!-- Your mobile menu content -->
-     <div class="flex flex-col p-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <a
+            href="./html_group/contact.html"
+            class="hidden md:block bg-[#e72c26] text-white px-5 py-2 rounded-full hover:bg-red-700 transition"
+          >
+            Book Now
+          </a>
+
+          <button id="menuBtn" class="md:hidden text-2xl">
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden bg-white border-t">
+        <!-- Your mobile menu content -->
+        <div class="flex flex-col p-5 space-y-4">
           <a href="index.html" class="text-[#e72c26]">Home</a>
           <a href="./html_group/about.html" class="hover:text-red-700">About</a>
-          <a href="./html_group/services.html" class="hover:text-red-700">Services</a>
-          <a href="./html_group/gallery.html" class="hover:text-red-700">Gallery</a>
-          <a href="./html_group/contact.html" class="hover:text-red-700">Contact</a>
+          <a href="./html_group/services.html" class="hover:text-red-700"
+            >Services</a
+          >
+          <a href="./html_group/gallery.html" class="hover:text-red-700"
+            >Gallery</a
+          >
+          <a href="./html_group/contact.html" class="hover:text-red-700"
+            >Contact</a
+          >
 
-          <a href="./html_group/contact.html" class="bg-[#e72c26] text-white py-3 rounded-lg text-center">
+          <a
+            href="./html_group/contact.html"
+            class="bg-[#e72c26] text-white py-3 rounded-lg text-center"
+          >
             Book Appointment
           </a>
         </div>
-  </div>
-</nav>
+      </div>
+    </nav>
 
     <!-- ================= HERO ================= -->
 
     <section
-      class="hero-bg min-h-screen md:h-screen  items-center py-24 md:py-0"
+      class="hero-bg min-h-screen md:h-screen items-center py-24 md:py-0"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 text-white">
-        
         <h1
           class="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-extrabold leading-tight md:pt-40"
         >
@@ -108,7 +133,9 @@
           Auto Repair & Maintenance
         </h1>
 
-        <p class="mt-6 text-base sm:text-lg max-w-2xl text-gray-200 md:text-3xl lg:text-lg md:mt-20 lg:mt-10">
+        <p
+          class="mt-6 text-base sm:text-lg max-w-2xl text-gray-200 md:text-3xl lg:text-lg md:mt-20 lg:mt-10"
+        >
           We provide reliable diagnostics, engine repairs, brake services, oil
           changes, electrical repairs, and complete vehicle maintenance with
           experienced mechanics and quality spare parts.
@@ -262,19 +289,34 @@
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold text-[#e72c26]" data-target="3500">850+</h1>
+          <h1
+            class="counter text-5xl font-bold text-[#e72c26]"
+            data-target="3500"
+          >
+            850+
+          </h1>
 
           <p class="mt-3">Happy Clients</p>
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold text-[#e72c26]" data-target="5000">700+</h1>
+          <h1
+            class="counter text-5xl font-bold text-[#e72c26]"
+            data-target="5000"
+          >
+            700+
+          </h1>
 
           <p class="mt-3">Vehicles Repaired</p>
         </div>
 
         <div>
-          <h1 class="counter text-5xl font-bold text-[#e72c26]" data-target="24">400+</h1>
+          <h1
+            class="counter text-5xl font-bold text-[#e72c26]"
+            data-target="24"
+          >
+            400+
+          </h1>
 
           <p class="mt-3">Emergency Support</p>
         </div>
